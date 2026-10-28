@@ -1,0 +1,33 @@
+{
+  "name": "fl-clone",
+  "version": "15.0.0",
+  "description": "Electron-based music production app",
+  "main": "main.js",
+  "author": "Adam",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder",
+    "dist:win": "electron-builder --win"
+  },
+  "devDependencies": {
+    "electron": "^28.3.3",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.example.flclone",
+    "productName": "FL Clone",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "index.html",
+      "main.js",
+      "package.json",
+      "js/**/*"
+    ],
+    "win": {
+      "target": "nsis"
+    }
+  }
+}
